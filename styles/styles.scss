@@ -1,0 +1,152 @@
+$text-dark: #383a3c;
+$text-light: #f7ebd8;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    color: $text-dark;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &_header {
+        height: 129px;
+        background-image: url("../pictures/cyan_bg_noise.png");
+        position: sticky;
+        top: 0;
+    }
+
+    &_slider {
+        height: 912px;
+        background-image: url("../pictures/cyan_bg_noise.png");
+    }
+
+    &_about {
+        height: 800px;
+        background-image: url("../pictures/beige_bg_noise.png");
+    }
+
+    &_portfolio {
+        height: 848px;
+        background-image: url("../pictures/orange_bg_noise.png");
+    }
+
+    &_blog {
+        height: 1050px;
+        background-image: url("../pictures/light_bg_noise.png");
+    }
+
+    &_contact {
+        height: 825px;
+        background-image: url("../pictures/dark_bg_noise.png");
+    }
+
+    &__title {
+        font-size: 86px;
+        text-shadow: 1.5px 1.5px #fcfaf7, 4px 4px $text-dark;
+
+        &_light {
+            color: $text-light;
+            text-shadow: 2px 2px $text-dark, 3.5px 3.5px #fcfaf7;
+        }
+    }
+
+    &__tagline {
+        font-size: 16px;
+        font-family: 'Oswald', sans-serif;
+    }
+}
+
+.ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-detail {
+    width: 40px;
+    border-top: solid 2px $text-dark;
+    margin-top: 1px;
+
+}
+
+.container {
+    width: 960px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url("../pictures/cyan_bg_noise.png");
+    font-family: 'Oswald', sans-serif;
+    font-size: 27px;
+    color: $text-light;
+}
+
+
+.slider {
+    &__picture-frame {
+        width: 960px;
+        background-color: #fbfaf6;
+        padding: 10px;
+    }
+    
+    &__picture {
+        height: 400px;
+        background-color: #e3dfd7;
+        position: relative;
+        overflow: hidden;    
+
+    }
+
+    &__gallery {
+        display: flex;
+        position: absolute;
+    }
+
+    &__nav-button {
+        position: absolute;
+    }
+}
+
+.ribbon {
+    height: 60px;
+    width: 613px;
+    background-image: url("../pictures/ribbon.png");
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.logo {
+    height: 150px;
+    width: 150px;
+    background-color: cadetblue;
+}
+
+.interests {
+    display: flex;
+    justify-content: space-evenly;
+
+    &__section {
+        margin: 10px;
+        width: 210px;
+    }
+}
+
+

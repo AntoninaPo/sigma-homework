@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.checker-container {
+  background-color: #f4eff4;
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+
+.ckecker-body {
+  height: 100px;
+  width: 65px;
+  border-radius: 90% 50% 0 0;
+  background-color: #4c5057;
+  position: absolute;
+  top: 60%;
+  left: 39%;
+}
+
+.face {
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  height: 50px;
+  width: 50px;
+  border-radius: 0 0 40% 45%;
+  background-color: #e3e0dd;
+  overflow: hidden;
+  -webkit-animation: head-bop 5s infinite;
+          animation: head-bop 5s infinite;
+}
+
+@-webkit-keyframes head-bop {
+  20% {
+    transform: rotate(-30deg);
+  }
+  30% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes head-bop {
+  20% {
+    transform: rotate(-30deg);
+  }
+  30% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+}
+.cheek {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #78bbbb;
+}
+.cheek_left {
+  top: 56%;
+  left: -10%;
+}
+.cheek_right {
+  top: 50%;
+  right: -10%;
+}
+
+.eye {
+  height: 15px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: #383a3c;
+  position: absolute;
+  transform: rotate(-20deg);
+}
+.eye_left {
+  top: 40%;
+  left: 27%;
+}
+.eye_right {
+  top: 36%;
+  right: 30%;
+}
+
+.hat-top {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 50px;
+  height: 90px;
+  transform: skew(-25deg);
+  border-radius: 120% 0 0 0;
+  background-color: #4c5057;
+}
+
+.hat-base {
+  position: absolute;
+  top: 44%;
+  left: 18%;
+  height: 40px;
+  width: 160px;
+  border-radius: 50%;
+  transform: skew(30%);
+  transform: rotate(-10deg);
+  background-color: #4c5057;
+}
+
+.bird-container {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.bird-container_first {
+  top: 36%;
+  left: 17%;
+  -webkit-animation: bird-hop-one 5s infinite;
+          animation: bird-hop-one 5s infinite;
+}
+.bird-container_second {
+  left: 56%;
+  top: 30%;
+  -webkit-animation: bird-hop-two 5s infinite;
+          animation: bird-hop-two 5s infinite;
+}
+
+@-webkit-keyframes bird-hop-one {
+  60% {
+    top: 20%;
+  }
+}
+
+@keyframes bird-hop-one {
+  60% {
+    top: 20%;
+  }
+}
+@-webkit-keyframes bird-hop-two {
+  20% {
+    top: 15%;
+  }
+}
+@keyframes bird-hop-two {
+  20% {
+    top: 15%;
+  }
+}
+.bird-body {
+  position: absolute;
+  top: 13%;
+  left: 30%;
+  height: 35px;
+  width: 25px;
+  background-color: #78bbbb;
+  border-radius: 50% 60% 45% 40%;
+}
+.bird-body_second {
+  background-color: #e68966;
+}
+
+.bird-foot {
+  height: 11px;
+  width: 2.5px;
+  border-radius: 20%;
+  position: absolute;
+  bottom: 0;
+  background-color: #383a3c;
+}
+.bird-foot_left {
+  left: 44%;
+  transform: rotate(-10deg);
+}
+.bird-foot_right {
+  left: 58%;
+  transform: rotate(4deg);
+}
+
+.bird-eye {
+  height: 5px;
+  width: 3px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: #383a3c;
+}
+.bird-eye_left {
+  top: 35%;
+  left: 40%;
+}
+.bird-eye_left_second {
+  left: 45%;
+}
+.bird-eye_right {
+  top: 35%;
+  left: 50%;
+}
+.bird-eye_right_second {
+  left: 55%;
+}/*# sourceMappingURL=animat.css.map */
