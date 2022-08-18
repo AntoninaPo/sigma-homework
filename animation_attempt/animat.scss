@@ -6,7 +6,7 @@ $darker-grey-color: #383a3c;
 $light-grey-color: #e3e0dd;
 $light-grey-shading: #c1bbb5;
 $beige-color: #e6e1d0;
-
+$anim-lenght: 2s;
 
 * {
     margin: 0;
@@ -14,15 +14,20 @@ $beige-color: #e6e1d0;
     box-sizing: border-box;
 }
 
-.container {
+.animation {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-color: $beige-color;
+
+    &.is-hidden {
+        display: none;
+        
+    }
 }
 
 .checker-container {
-    background-color: #f4eff4;
     height: 300px;
     width: 300px;
     position: relative;
@@ -47,18 +52,44 @@ $beige-color: #e6e1d0;
     border-radius: 0 0 40% 45%;
     background-color: $light-grey-color;
     overflow: hidden;
-    animation: head-bop 5s infinite;
+    animation: head-bop $anim-lenght infinite;
 }
 
 @keyframes head-bop {
+    10% {
+        transform: rotate(-20deg);
+        top: 52%;
+        left: 36%;
+    }
     20% {
-        transform: rotate(-30deg);
+        transform: rotate(-10deg);
+        top: 50%;
+        left: 36%;
     }
-    30% {
-        transform: rotate(-25deg);
+    35% {
+        transform: rotate(-20deg);
+        top: 52%;
+        left: 36%;
     }
-    50% {
-        transform: rotate(60deg);
+    47% {
+        top: 50%;
+        left: 38%;
+    }
+
+    60% {
+        transform: rotate(20deg);
+        top: 52%;
+        left: 40%;        
+    }
+    70% {
+        transform: rotate(10deg);
+        top: 50%;
+        left: 40%;
+    }
+    85% {
+        transform: rotate(15deg);
+        top: 52%;
+        left: 40%;
     }
 
 }
@@ -110,6 +141,44 @@ $beige-color: #e6e1d0;
     transform: skew(-25deg);
     border-radius: 120% 0 0 0 ;
     background-color: $dark-grey-color;
+    transform-origin: bottom center;
+    animation: hat-anim $anim-lenght infinite;
+}
+
+@keyframes hat-anim {
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        left: 34%;
+        transform: rotate(-10deg);
+    }
+    20% {
+        left: 35%;
+        transform: rotate(-8deg);
+    }
+    35% {
+        left:34%;
+        transform: rotate(-9deg);
+    }
+    47% {
+        transform: rotate(0);
+    }
+    60% {
+        left: 42%;
+        transform: rotate(12deg);
+    }
+    70% {
+        left: 41%;
+        transform: rotate(10deg);
+    }
+    85% {
+        left: 42%;
+        transform: rotate(11deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
 }
 
 .hat-base {
@@ -122,7 +191,49 @@ $beige-color: #e6e1d0;
     transform: skew(30%);
     transform: rotate(-10deg);
     background-color: $dark-grey-color;
+    animation: head-bop-hat $anim-lenght infinite;
 }
+
+@keyframes head-bop-hat {
+    10% {
+        transform: rotate(-20deg);
+        top: 46%;
+        left: 16%;
+    }
+    20% {
+        transform: rotate(-10deg);
+        top: 44%;
+        left: 16%;
+    }
+
+    35% {
+        transform:rotate(-20deg);
+        top: 46%;
+        left: 16%;
+    }
+    47% {
+        top: 44%;
+        left: 18%;        
+    }
+    60% {
+        transform: rotate(20deg);
+        top: 46%;
+        left: 20%;
+    }
+    70% {
+        transform: rotate(10deg);
+        top: 44%;
+        left: 20%;
+        height: 35px;        
+
+    }
+    85% {
+        transform: rotate(20deg);
+        top: 46%;
+        left: 20%;
+    }
+}
+
 
 .bird-container {
     position: absolute;
@@ -130,22 +241,31 @@ $beige-color: #e6e1d0;
     width: 50px;
 
     &_first {
-        top: 36%;
+        top: 30%;
         left: 17%;
-        animation: bird-hop-one 5s infinite;
+        animation: bird-hop-one $anim-lenght infinite;
     }
 
     &_second {
         left: 56%;
         top: 30%;
-        animation: bird-hop-two 5s infinite;
+        animation: bird-hop-two $anim-lenght infinite;
     }
 }
 
 @keyframes bird-hop-one {
-    60% {
-        top: 20%;
+    0% {
+        top: 10%;
     }
+    52% {
+        top: 30%;
+    }
+
+    96%, 100% {
+        top: 10%;
+    }
+
+
 }
 
 @keyframes bird-hop-two {
@@ -163,9 +283,40 @@ $beige-color: #e6e1d0;
     background-color: $cyan-color;
     border-radius: 50% 60% 45% 40%;
 
+    &_first {
+        animation: bird-shrink_first $anim-lenght infinite;
+    }
+
     &_second {
         background-color: $orange-color;
+        animation: bird-shrink_second $anim-lenght infinite;
     }
+}
+
+@keyframes bird-shrink_first {
+    0% {
+        height: 25px;
+        width: 35px;
+        left: 20%;
+    }
+    60% {
+        height: 35px;
+        width: 25px;
+        left: 30%;    
+    }
+    100% {
+        height: 25px;
+        width: 35px;
+        left: 20%;
+    }
+}
+
+@keyframes bird-shrink_second {
+    20% {
+        height: 25px;
+        width: 35px;
+        left: 20%;
+    } 
 }
 
 .bird-foot {
@@ -175,6 +326,7 @@ $beige-color: #e6e1d0;
     position: absolute;
     bottom: 0;
     background-color: $darker-grey-color;
+    animation: feet-up $anim-lenght infinite;
 
     &_left {
         left: 44%;
@@ -184,6 +336,12 @@ $beige-color: #e6e1d0;
     &_right {
         left: 58%;
         transform: rotate(4deg) ;
+    }
+}
+
+@keyframes feet-up {
+    60% {
+        bottom: 10%; 
     }
 }
 
@@ -211,8 +369,6 @@ $beige-color: #e6e1d0;
             left: 55%;
         }
     }
-
-
 }
 
 

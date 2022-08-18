@@ -4,119 +4,265 @@
         <title>Final project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="animation_attempt/animat.css">
+        <script src="scripts/scripts.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 </head>
     <body>
-        <div class="section section_header">
-            <nav class="navigation container">
-                <div class="navigation__item">About me</div>
-                <div class="navigation__item">Portfolio</div>
-                <div class="logo">
-                    
+        <div class="animation" id="animation">
+            <div class="checker-container">
+                <div class="ckecker-body"></div>
+                <div class="face">
+                    <div class="cheek cheek_left"></div>
+                    <div class="cheek cheek_right"></div>
+                    <div class="eye eye_left"></div>
+                    <div class="eye eye_right"></div>
                 </div>
-                <div class="navigation__item">About me</div>
-                <div class="navigation__item">About me</div>
-            </nav>
+                <div class="hat-top"></div>
+                <div class="hat-base"></div>
+                <div class="bird-container bird-container_first">
+                    <div class="bird-foot bird-foot_left"></div>
+                    <div class="bird-foot bird-foot_right"></div>
+                    <div class="bird-body bird-body_first"></div>
+                    <div class="beak"></div>
+                    <div class="bird-eye bird-eye_left"></div>
+                    <div class="bird-eye bird-eye_right"></div>                    
+                </div>
+                <div class="bird-container bird-container_second">
+                    <div class="bird-foot bird-foot_left "></div>
+                    <div class="bird-foot bird-foot_right"></div>
+                    <div class="bird-body bird-body_second"></div>
+                    <div class="beak"></div>
+                    <div class="bird-eye bird-eye_left bird-eye_left_second"></div>
+                    <div class="bird-eye bird-eye_right bird-eye_right_second"></div>                    
+                </div>
+            </div>
         </div>
-        <div class="section section_slider">
-            <div class="container">
-                <h1 class="section__title">RETRO</h1>
-                <div class="ribbon-container">
-                    <div class="ribbon">FGFHJJH</div>
-                    <p class="slider-section__text text_dark"></p>
-                </div>
-                <div class="slider__picture-frame">
-                    <div class="slider__picture">
-                        <div class="slider__gallery">
-                            <img src="pictures/picture1.png" />
-                            <img src="pictures/pic2.png" />
-                            <img src="pictures/pic3.png" />
-                            <img src="pictures/pic4.png" />
-                            <img src="pictures/pic5.png" />
+        <div class="main is-hidden" id="main">
+            <div class="header">
+                <nav class="navigation container">
+                    <a class="navigation__item" href="#about-me">ABOUT ME</a>
+                    <a class="navigation__item" href="#portfolio">PORTFOLIO</a>
+                    <div class="logo"><img src="pictures/logo.png"/></div>
+                    <a class="navigation__item" href="#my-blog">MY BLOG</a>
+                    <a class="navigation__item" href="#contact-me">CONTACT ME</a>
+                </nav>
+            </div>
+            <div class="section section_slider">
+                <div class="container">
+                    <h1 class="section__title section__title_main">RETRO</h1>
+                    <div class="ribbon">
+                        <p class="ribbon__text">OLD STYLE PORTFOLIO</p>
+                    </div>
+                    <div class="slider__picture-frame">
+                        <div class="slider__picture">
+                            <div class="slider__gallery" id="slider-gallery">
+                                <img src="pictures/pic1.png" />
+                                <img src="pictures/pic2.png" />
+                                <img src="pictures/pic4.png" />
+                                <img src="pictures/pic3.png" />
+                                <img src="pictures/pic5.png" />
+                            </div>
+                            <button onclick="slideOnClick('left')" class="slider__nav-button slider__nav-button_left">
+                                &lt
+                            </button>
+                            <button onclick="slideOnClick('right')" class="slider__nav-button slider__nav-button_right">
+                                &gt
+                            </button>
                         </div>
-                        <button class="slider__nav-button slider__nav-button_left">
-                            &lt
-                        </button>
-                        <button class="slider__nav-button slider__nav-button_right">
-                            &gt
-                        </button>
+                        <p class="slider__text">KODAK CAMERA</p>
                     </div>
-                    <p class="slider-section__text text_dark">KODAK CAMERA</p>
+                    <p class="slider__text_under slider__text_under_big">HERE ARE SOME</p>
+                    <p class="slider__text_under">OF MY WORKS!</p>
                 </div>
-                <p class="slider-section__text text_light text_bigger">"HELLO, I`M TONIA</p>
-                <p class="slider-section__text text_light">I`M USING THIS THEME"</p>
             </div>
-        </div>
-        <div class="section section_about">
-            <div class="container">
-                <h1 class="section__title">ABOUT ME</h1>
-                <div class="ornament text_light">
-                    <div class="line-detail"></div> ××× <div class="line-detail"></div>
-                </div>
-                <h2 class="section__tagline">I'M A DESIGNER...</h2>
-                <div class="interests">
-                    <div class="interests__section">
-                        <div class="interests__graphic interests__graphic_movies" ></div>
-                        <h3 class="interest-name">MOVIES</h3>
-                        <p class="interest-phrase">WHAT I WATCH</p>
-                        <div class="devider-line"></div>
-                        <p class="about-interest"></p>
+            <a name="about-me" class="anchor"></a>
+            <div class="section section_about">
+                <div class="container">
+                    <h1 class="section__title">ABOUT ME</h1>
+                    <div class="ornament">
+                        <div class="line-detail"></div> &#215&#215&#215 <div class="line-detail"></div>
                     </div>
-                    <div class="interests__section">
-                        <div class="interests__graphic interests__graphic_music" ></div>
-                        <h3 class="interest-name">MUSIC</h3>
-                        <p class="interest-phrase">WHAT I LISTEN</p>
-                        <div class="devider-line"></div>
-                        <p class="about-interest"></p>
-                    </div>
-                    <div class="interests__section">
-                        <div class="interests__graphic interests__graphic_clothes" ></div>
-                        <h3 class="interest-name">CLOTHES</h3>
-                        <p class="interest-phrase">WHAT I WEAR</p>
-                        <div class="devider-line"></div>
-                        <p class="about-interest"></p>
-                    </div>
-                    <div class="interests__section">
-                        <div class="interests__graphic interests__graphic_food" ></div>
-                        <h3 class="interest-name">FOOD</h3>
-                        <p class="interest-phrase">WHAT I EAT</p>
-                        <div class="devider-line"></div>
-                        <p class="about-interest"></p>
+                    <h2 class="section__phrase">I'M A DESIGNER...</h2>
+                    <div class="interests">
+                        <div class="interests__section">
+                            <div class="interests__graphic interests__graphic_movies" ></div>
+                            <h3 class="interests__name">MOVIES</h3>
+                            <p class="interests__phrase">WHAT I WATCH</p>
+                            <div class="line-detail line-detail_centered"></div>
+                            <p class="interests__about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sapien neque, fermentum sed mollis eu, blandit ac lorem. Suspendisse commodo pellentesque orci, eget viverra nisi. Nulla lorem purus, tincidunt ac gravida sed, euismod et diam. Morbi ultricies augue eget aliquam condimentum.</p>
+                        </div>
+                        <div class="interests__section">
+                            <div class="interests__graphic interests__graphic_music" ></div>
+                            <h3 class="interests__name">MUSIC</h3>
+                            <p class="interests__phrase">WHAT I LISTEN</p>
+                            <div class="line-detail line-detail_centered"></div>
+                            <p class="interests__about">Aenean nulla ex, posuere blandit tincidunt sit amet, pellentesque sed metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed auctor nisi a neque pellentesque lobortis. Suspendisse feugiat lobortis tellus a auctor. Vivamus id ultrices orci.</p>
+                        </div>
+                        <div class="interests__section">
+                            <div class="interests__graphic interests__graphic_clothes" ></div>
+                            <h3 class="interests__name">CLOTHES</h3>
+                            <p class="interests__phrase">WHAT I WEAR</p>
+                            <div class="line-detail line-detail_centered"></div>
+                            <p class="interests__about">Etiam finibus blandit massa, in gravida ligula finibus ut. Maecenas eleifend commodo nunc, vel dictum mauris imperdiet vitae. Duis convallis bibendum neque, et sagittis quam accumsan et. Donec magna erat, congue quis aliquet ac, pretium non ipsum.</p>
+                        </div>
+                        <div class="interests__section">
+                            <div class="interests__graphic interests__graphic_food" ></div>
+                            <h3 class="interests__name">FOOD</h3>
+                            <p class="interests__phrase">WHAT I EAT</p>
+                            <div class="line-detail line-detail_centered"></div>
+                            <p class="interests__about">Nullam interdum mauris sit amet velit accumsan, imperdiet porttitor ex sagittis. Cras molestie egestas lectus et molestie. Cras non turpis in velit iaculis bibendum vel et felis. Fusce id tincidunt eros, in congue lacus. Maecenas venenatis felis ac orci aliquet, a viverra est eleifend.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section section_portfolio">
-            <div class="container">
-                <h1 class="section__title">PORFOLIO</h1>
-                <div class="ornament text_light">
-                    <div class="line-detail"></div> ××× <div class="line-detail"></div>
+            <a name="portfolio" class="anchor"></a>
+            <div class="section section_portfolio">
+                <div class="container">
+                    <h1 class="section__title">PORTFOLIO</h1>
+                    <div class="ornament">
+                        <div class="line-detail"></div> &#215&#215&#215 <div class="line-detail"></div>
+                    </div>
+                    <h2 class="section__phrase">THIS MY PORTFOLIO</h2>
+                    <div class="portfolio">
+                        <div class="filters">
+                            <p class="filters__text">Filter by</p>
+                            <div class="filters__item"><p class="filteres__title">&#8226 design</p></div>
+                            <div class="filters__item"><p class="filteres__title">&#8226 original charachters</p></div>
+                            <div class="filters__item"><p class="filteres__title">&#8226 ilustrations</p></div>
+                            <div class="filters__item"><p class="filteres__title">&#8226 paintings</p></div>
+                            <div class="filters__item"><p class="filteres__title">&#8226 stickers</p></div>
+                        </div>
+                        <div class="portfolio__gallery">
+                            <div class="portfolio__item">
+                                <div class="portfolio__picture"><img src="pictures/portfolio-gallery-test.png"></div>
+                                <div class="portfolio__icon"><img src="pictures/pic-icon.png"></div>
+                                <p class="portfolio__text">GALLERIES ARE FUNNY</p>
+                            </div>
+                            <div class="portfolio__item">
+                                <div class="portfolio__picture"><img src="pictures/portfolio-gallery-test.png"></div>
+                                <div class="portfolio__icon"><img src="pictures/pic-icon.png"></div>
+                                <p class="portfolio__text">SOME IMAGE</p>
+                            </div>
+                            <div class="portfolio__item">
+                                <div class="portfolio__picture"><img src="pictures/portfolio-gallery-test.png"></div>
+                                <div class="portfolio__icon"><img src="pictures/pic-icon.png"></div>
+                                <p class="portfolio__text">GALLERIES ARE FUNNY</p>
+                            </div>
+                            <div class="portfolio__item">
+                                <div class="portfolio__picture"><img src="pictures/portfolio-gallery-test.png"></div>
+                                <div class="portfolio__icon"><img src="pictures/pic-icon.png"></div>
+                                <p class="portfolio__text">GALLERIES ARE FUNNY</p>
+                            </div>
+                            <div class="portfolio__item">
+                                <div class="portfolio__picture"><img src="pictures/portfolio-gallery-test.png"></div>
+                                <div class="portfolio__icon"><img src="pictures/pic-icon.png"></div>
+                                <p class="portfolio__text">GALLERIES ARE FUNNY</p>
+                            </div>
+                            <div class="portfolio__item">
+                                <div class="portfolio__picture"><img src="pictures/portfolio-gallery-test.png"></div>
+                                <div class="portfolio__icon"><img src="pictures/pic-icon.png"></div>
+                                <p class="portfolio__text">GALLERIES ARE FUNNY</p>
+                            </div>
+                        </div>                    
+                    </div>
+                    <div class="line-detail line-detail_centered"></div>
+                    <button class="browse-button">BROWSE ALL</button>
                 </div>
-                <h2 class="section__tagline">THIS MY PORTFOLIO</h2>
             </div>
-        </div>
-        <div class="section section_blog">
-            <div class="container">
-                <h1 class="section__title">MY BLOG</h1>
-                <div class="ornament text_light">
-                    <div class="line-detail"></div> ××× <div class="line-detail"></div>
+            <a name="my-blog" class="anchor"></a>
+            <div class="section section_blog">
+                <a name="my-blog"></a>
+                <div class="container">
+                    <h1 class="section__title">MY BLOG</h1>
+                    <div class="ornament">
+                        <div class="line-detail"></div> &#215&#215&#215 <div class="line-detail"></div>
+                    </div>
+                    <h2 class="section__phrase">NEWS FROM MY HOUSE</h2>
+                    <div class="blog">
+                        <div class="blog__post">
+                            <div class="post__frame">
+                                <div class="post__image"><img src="pictures/blog-test.png"></div>
+                            </div>
+                            <div class="post__content">
+                                <p class="post__headline">They got there early</p>
+                                <div class="post__details">
+                                    <p class="post__info">AUGUST 18, 2022 // ADMIN // FUN, TRAVEL, TRENDS</p>
+                                    <p class="post__response-count">0 RESPONCES</p>
+                                </div>
+                                <div class="line-detail"></div>
+                                <p class="post__text">Sed in tortor dignissim, ornare urna at, commodo diam. In bibendum felis in erat fringilla, vitae aliquam metus semper. Morbi purus neque, congue ut efficitur ac, volutpat eget augue. Aenean vitae est erat.<button class="more-button">(MORE...)</button>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="blog__post">
+                            <div class="post__frame">
+                                <div class="post__image"><img src="pictures/blog-test.png"></div>
+                            </div>
+                            <div class="post__content">
+                                <p class="post__headline">I met an interesting turtle</p>
+                                <div class="post__details">
+                                    <p class="post__info">AUGUST 18, 2022 // ADMIN // FUN, TRAVEL, TRENDS</p>
+                                    <p class="post__response-count">0 RESPONCES</p>
+                                </div>
+                                <div class="line-detail"></div>
+                                <p class="post__text">Sed in tortor dignissim, ornare urna at, commodo diam. In bibendum felis in erat fringilla, vitae aliquam metus semper. Morbi purus neque, congue ut efficitur ac, volutpat eget augue. Aenean vitae est erat.<button class="more-button">(MORE...)</button>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="blog__post">
+                            <div class="post__frame">
+                                <div class="post__image"><img src="pictures/blog-test.png"></div>
+                            </div>
+                            <div class="post__content">
+                                <p class="post__headline">The beach was crowded</p>
+                                <div class="post__details">
+                                    <p class="post__info">AUGUST 18, 2022 // ADMIN // FUN, TRAVEL, TRENDS</p>
+                                    <p class="post__response-count">0 RESPONCES</p>
+                                </div>
+                                <div class="line-detail"></div>
+                                <p class="post__text">Sed in tortor dignissim, ornare urna at, commodo diam. In bibendum felis in erat fringilla, vitae aliquam metus semper. Morbi purus neque, congue ut efficitur ac, volutpat eget augue. Aenean vitae est erat.<button class="more-button">(MORE...)</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line-detail line-detail_centered"></div>
+                    <button class="browse-button">SHOW ALL POSTS</button>
                 </div>
-                <h2 class="section__tagline">THIS MY PORTFOLIO</h2>
             </div>
-        </div>
-        <div class="section section_contact">
-            <div class="container">
-                <h1 class="section__title section__title_light">CONTACT ME</h1>
-                <div class="ornament text_light">
-                    <div class="line-detail"></div> ××× <div class="line-detail"></div>
-                </div>
-                <h2 class="section__tagline">THIS MY PORTFOLIO</h2>
+            <a name="contact-me" class="anchor"></a>
+            <div class="section section_contact">
+                <div class="container">
+                    <h1 class="section__title section__title_light">CONTACT ME</h1>
+                    <div class="ornament text_light">
+                        <div class="line-detail line-detail_light"></div> &#215&#215&#215 <div class="line-detail line-detail_light"></div>
+                    </div>
+                    <h2 class="section__phrase text_light">I'LL ANSWER YOUR QUESTIONS! </h2>
+                    <div class="contact">
+                        <div class="contact__form">
+                            <input type="text" class="contact__field" name="name" placeholder="Name">
+                            <input type="email" class="contact__field" name="email" placeholder="E-mail">
+                            <input type="text" class="contact__field" name="subject" placeholder="Subject">
+                            <textarea type="text" class="contact__field contact__field_big" name="subject" placeholder="Your message"></textarea>
+                            <div class="contact__button-container">
+                                <button class="contact__button">Send message</button>
+                            </div>
+                        </div>
+                        <div class="socials">
+                            <p class="socials__text text_light"> I AM SOCIAL</p>
+                            <div class="line-detail line-detail_centered line-detail_light"></div>
+                            <div class="socials__icons">
+                                <a href="https://twitter.com/edgy_burger " target="_blank" class="socials__icon"><img src="pictures/twitter-icon.png"></a>
+                                <a href="https://www.instagram.com/edgy_burger/" target="_blank" class="socials__icon"><img src="pictures/insta-icon.png"></a>
+                                <a href="https://www.behance.net/toniapohrebniak" target="_blank" class="socials__icon"><img src="pictures/behance-icon.png"></a>
+                                <a href="https://www.pinterest.com/pogrebnyakantonina/" target="_blank" class="socials__icon"><img src="pictures/pinterest-icon.png"></a>
+                                <a href="https://twitter.com/edgy_burger" target="_blank" class="socials__icon"><img src="pictures/facebook-icon.png"></a>
+                            </div>    
+                        </div>
+                    </div>
+                </div>                                
             </div>
-        </div>
-        <div class="socials">
-
         </div>      
-
     </body>
